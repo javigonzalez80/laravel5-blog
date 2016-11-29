@@ -1,3 +1,12 @@
+# Laravel 5.2 Blog
+
+A Laravel 5.2 Blog with categories, tags and comments.
+
+The Blog has a admin page (url/admin) to create or edit the articles, categories, tags and comments.
+
+An article needs a category therefore you need to create a category before you create an article 
+or you have to change it in the file: app\Http\Requests\ArticleRequest.php.
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
