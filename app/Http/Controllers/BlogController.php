@@ -82,13 +82,13 @@ class BlogController extends Controller {
 		
 		$article = Article::findorFail($id);
 		
-        $comment = new Comment();
-        $comment->name = $request->name;
-        $comment->email = $request->email;
-        $comment->body = $request->body;
+		$comment = new Comment();
+		$comment->name = $request->name;
+		$comment->email = $request->email;
+		$comment->body = $request->body;
 		$comment->approved = 0;
-        $comment->article()->associate($article);
-        $comment->save();
+		$comment->article()->associate($article);
+		$comment->save();
 		
 		return redirect()->route('blog.commentform', [$article->slug])->with('flash_message', 'Comment has been added and needs to be approved!');
 		
